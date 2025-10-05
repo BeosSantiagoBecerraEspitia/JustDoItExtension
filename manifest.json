@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Bloqueador de Sitios",
+  "version": "1.1",
+  "description": "Evita acceder a sitios que afectan tu productividad.",
+
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "pages/bloqueado.html",
+        "scripts/bloqueado.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "pages/opciones.html",
+    "default_title": "Bloqueador de Sitios"
+  },
+
+  "options_page": "pages/opciones.html"
+}

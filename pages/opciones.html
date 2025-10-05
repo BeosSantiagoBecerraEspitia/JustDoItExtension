@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurar Sitios Bloqueados</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { padding: 10px; margin: 5px; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 5px 0; }
+    button.delete { background: red; color: white; border: none; padding: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Lista de Sitios Bloqueados</h2>
+  <ul id="lista"></ul>
+  <label for="nuevoSitio">web</label><input type="text" id="nuevoSitio" placeholder="Ej: twitter.com">
+  <label for="razon">razon</label><input type="text" id="razon"  placeholder="Ej:Necesito Estudiar">
+  <button id="agregar">Agregar</button>
+
+  <script src="../scripts/opciones.js"></script>
+</body>
+</html>

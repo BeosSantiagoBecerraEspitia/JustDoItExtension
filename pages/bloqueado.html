@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Sitio Bloqueado</title>
+  <style>
+
+    :root{
+      --background-color:blue ;
+      --card-color:black
+    }
+
+    body {
+      text-align: center;
+      background: var(--background-color);
+      align-items: center;
+      display: flex;
+      font-size: 24px;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr 1fr; 
+      grid-template-rows: 1fr 1.3fr 0.9fr; 
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        ". block ."
+        ". Card ."
+        ". . .";
+    }
+
+    
+
+    .block{
+      grid-area: block;
+    }
+   
+    .box_1 {
+      font-family: cursive;
+      color: rgb(255, 255, 255);
+
+    }
+
+    
+
+
+    .big_box {
+      margin: auto;
+      height: 500px;
+      width: 800px;
+      background: var(--card-color)
+      ;
+      color: antiquewhite;
+      border-radius: 10px;
+      grid-area: Card;
+      background:--card-;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 3.5px );
+-webkit-backdrop-filter: blur( 3.5px );
+border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.978);
+    }
+
+    img {
+      max-width: 80%;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+
+    .racha{
+      font-size: xxx-large;
+      font-family: fantasy;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="block">
+    <h1 id="sitio " >¡Acceso Restringido!</h1>
+  </div>
+  
+
+   
+    <div class="big_box">
+      <div class="box_2">
+        <div class="racha"> 
+          <p id="racha">llevas dias sin romper tu racha
+          </p>
+        </div>
+       
+        <div class="Imagen">
+          <img src="../icons/fire-flame.gif" alt="Imagen de Advertencia">
+        </div>
+      </div>
+      <div class="box_1">
+        <p id="razon">aqui se escribe la razon por la cual no quiero visitar este
+          sitio</p>
+      </div>
+
+      <div class="box_3">
+        <p>Realmente vas a rendirte ahora ?</p>
+      </div>
+    </div>
+  
+  <script src="../scripts/bloqueado.js"></script>
+
+</body>
+
+</html>
